@@ -5,16 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Counter</title>
         <style>
-            tr{
-                text-align: center;
-                vertical-align: middle;
-            }
 
             .contagem{
             width:500px;
-            height:500px;
+            height:200px;
             background-color: #571fa0;
             position: absolute;
+            text-align: center;
+            align-items: center;
+            display: inline-block;
             }
 
             .numero{
@@ -72,10 +71,10 @@
     <div class="contagem">
         <table>
             <tr>
-                <td> <div class="numero" id="dia"></div> </td>
-                <td> <div class="numero" id="hora"></div> </td>
-                <td> <div class="numero" id="minuto"></div> </td>
-                <td> <div class="numero" id="segundo"></div> </td>
+                <td class="numero" id="dia"> </td>
+                <td class="numero" id="hora"> </td>
+                <td class="numero" id="minuto"> </td>
+                <td class="numero" id="segundo"> </td>
             </tr>
             <tr>
                 <td> <p class="legenda">Dias</p> </td>
