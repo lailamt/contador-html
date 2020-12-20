@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Counter</title>
+        <style>
+
+            .contagem{
+                width:100%;
+                height:200px;
+                background-color: #571fa0;
+                position: absolute;
+                text-align: center;
+                align-items: center;
+                display: inline-block;
+            }
+
+            table{
+                position: relative;
+                left: 50%;
+                border-spacing: 10px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .numero{
+                width: 75px;
+                height: 75px;
+                background-color: #f5e1b6;
+                color: #000000;
+                font-size: 42px;
+                border-radius: 50%;
+            }
+
+
+            .legenda{
+                height: 50px;
+                background-color: #ffffff;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+<body>
+    <script>
+        var target_date = new Date("january 06, 2021").getTime();
+        var dias, horas, minutos, segundos;
+        var regressiva = document.getElementById("regressiva");
+
+        setInterval(function () {
+
+            var current_date = new Date().getTime();
+            var segundos_f = (target_date - current_date) / 1000;
+
+            dias = parseInt(segundos_f / 86400);
+            segundos_f = segundos_f % 86400;
+            
+            horas = parseInt(segundos_f / 3600);
+            segundos_f = segundos_f % 3600;
+            
+            minutos = parseInt(segundos_f / 60);
+            segundos = parseInt(segundos_f % 60);
+
+            document.getElementById('dia').innerHTML = dias;
+            document.getElementById('hora').innerHTML = horas;
+            document.getElementById('minuto').innerHTML = minutos;
+            document.getElementById('segundo').innerHTML = segundos;
+        
+
+        }, 1000);
+    </script>
+
+
+
+    <div class="contagem">
+        <table>
+            <tr>
+                <td class="numero" id="dia"> </td>
+                <td class="numero" id="hora"> </td>
+                <td class="numero" id="minuto"> </td>
+                <td class="numero" id="segundo"> </td>
+            </tr>
+            <tr>
+                <td> <p class="legenda">Dias</p> </td>
+                <td> <p class="legenda">Horas</p> </td>
+                <td> <p class="legenda">Min</p> </td>
+                <td> <p class="legenda">Seg</p> </td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

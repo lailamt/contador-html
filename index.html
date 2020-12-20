@@ -5,36 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Counter</title>
         <style>
-
-            .contagem{
-            width:500px;
-            height:200px;
-            background-color: #571fa0;
-            position: absolute;
-            text-align: center;
-            align-items: center;
-            display: inline-block;
+            .container{
+                width: auto;
+                height: auto;
+                display: block;
+            }
+            .counter{
+                color: #e79cf1;
+                background: linear-gradient(to bottom, #e79cf1, transparent);
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                width: 15%;
+                height: 15%%;
+                padding: 25px 15px 35px;
+                margin: 0 auto 0 10px;
+                border: 10px solid #e79cf1;
+                border-radius: 100% 100%;
+                box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.3);
+                float: left;
+            }
+            .number{
+                color: rgb(92, 92, 92);
+                font-size:xx-large;
+                font-weight: 600;
+                /* display: block; */
+                margin: 25px 0 5px;
+            }
+            .subtitle{
+                color: rgb(109, 88, 109);
+                font-size:medium;
+                font-weight: 200;
+                text-transform: uppercase;
+                margin: 0;
             }
 
-            .numero{
-            width: 75px;
-            height: 75px;
-            background-color: #f5e1b6;
-            color: #000000;
-            font-size: 42px;
-            margin: 10px;
-            border-radius: 50px;
-            padding: 10px;
-            font-family: 'Courier New', Courier, monospace;
-            }
-
-
-            .legenda{
-            height: 50px;
-            line-height: 10px;
-            font-size:12px;
-            background-color: #ffffff;
-            }
         </style>
     </head>
 <body>
@@ -68,8 +72,34 @@
 
 
 
-    <div class="contagem">
-        <table>
+    <div class="container">
+        <div class="row-content">
+            <div class="day-content">
+                <div class="counter">
+                    <span class="number" id="dia"></span>
+                    <p class="subtitle">Dias</p>
+                </div>
+            </div>
+            <div class="hour-content">
+                <div class="counter">
+                    <span class="number" id="hora"></span>
+                    <p class="subtitle">Horas</p>
+                </div>
+            </div>
+            <div class="minute-content">
+                <div class="counter">
+                    <span class="number" id="minuto"></span>
+                    <p class="subtitle">Minutos</p>
+                </div>
+            </div>
+            <div class="second-content">
+                <div class="counter">
+                    <span class="number" id="segundo"></span>
+                    <p class="subtitle">Segundos</p>
+                </div>
+            </div>
+        </div>
+        <!-- <table>
             <tr>
                 <td class="numero" id="dia"> </td>
                 <td class="numero" id="hora"> </td>
@@ -83,7 +113,7 @@
                 <td> <p class="legenda">Seg</p> </td>
             </tr>
         </table>
-    </div>
+    </div> -->
     
 </body>
 </html>
