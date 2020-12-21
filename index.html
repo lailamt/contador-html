@@ -8,35 +8,40 @@
             .container{
                 width: auto;
                 height: auto;
-                display: block;
+                position: relative;
+                display:flex;
+                justify-content: space-between;
             }
             .counter{
+                display: block;
                 color: #e79cf1;
-                background: linear-gradient(to bottom, #e79cf1, transparent);
+                background: linear-gradient(to bottom, #e6beae, transparent);
                 font-family: 'Poppins', sans-serif;
-                text-align: center;
                 width: 15%;
-                height: 15%%;
-                padding: 25px 15px 35px;
-                margin: 0 auto 0 10px;
-                border: 10px solid #e79cf1;
+                text-align: center;
+                height: 15%;
+                padding: 15px 15px;
+                /* margin: 0 auto 0 5px; */
                 border-radius: 100% 100%;
-                box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.3);
-                float: left;
+                float: left; 
+                /* border: 10px transparent; */
+                /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.3); */
+                box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.3),0 0 10px 0 rgba(0,0,0,0.3);;
+                border: 10px solid #e6beae;
             }
             .number{
-                color: rgb(92, 92, 92);
-                font-size:xx-large;
+                color: #4f6367;
+                font-size:6vw;
                 font-weight: 600;
-                /* display: block; */
-                margin: 25px 0 5px;
+                display: block;
+                /* margin: 0 0 5px; */
             }
             .subtitle{
-                color: rgb(109, 88, 109);
-                font-size:medium;
+                display: block;
+                color: #4f6367;
+                font-size:2vw;
                 font-weight: 200;
                 text-transform: uppercase;
-                margin: 0;
             }
 
         </style>
@@ -73,32 +78,33 @@
 
 
     <div class="container">
-        <div class="row-content">
-            <div class="day-content">
+        <!-- <div class="row-content"> -->
+            <!-- <div class="content"> -->
                 <div class="counter">
                     <span class="number" id="dia"></span>
                     <p class="subtitle">Dias</p>
                 </div>
-            </div>
-            <div class="hour-content">
+            <!-- </div> -->
+            <!-- <div class="content"> -->
                 <div class="counter">
                     <span class="number" id="hora"></span>
                     <p class="subtitle">Horas</p>
                 </div>
-            </div>
-            <div class="minute-content">
+            <!-- </div> -->
+            <!-- <div class="content"> -->
                 <div class="counter">
                     <span class="number" id="minuto"></span>
                     <p class="subtitle">Minutos</p>
                 </div>
-            </div>
-            <div class="second-content">
+            <!-- </div> -->
+            <!-- <div class="content"> -->
                 <div class="counter">
                     <span class="number" id="segundo"></span>
                     <p class="subtitle">Segundos</p>
                 </div>
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    </div>
         <!-- <table>
             <tr>
                 <td class="numero" id="dia"> </td>
